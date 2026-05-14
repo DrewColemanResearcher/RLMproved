@@ -1,0 +1,29 @@
+[project]
+name = "rlm-mcp-app"
+version = "0.1.0"
+description = "An RLM MCP Client-Server backend application."
+authors = [
+    {name = "Andrea Cacioli",email = "andrea.cacioli@staff.aruba.it"}
+]
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "fastapi (>=0.115.0,<1.0.0)",
+    "pydantic-ai (>=1.84.1,<2.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "python-multipart (>=0.0.20,<1.0.0)",
+    "uvicorn (>=0.34.0,<1.0.0)"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0,<9.0.0"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
