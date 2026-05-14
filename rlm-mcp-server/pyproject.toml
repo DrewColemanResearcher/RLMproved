@@ -3,7 +3,7 @@ name = "rlm-mcp-app"
 version = "0.1.0"
 description = "An RLM MCP Client-Server backend application."
 authors = [
-    {name = "Andrea Cacioli",email = "andrea.cacioli@staff.aruba.it"}
+    {name = "Drew Coleman",email = "drew.coleman@staff.researcher.com"}
 ]
 requires-python = ">=3.12,<4.0"
 dependencies = [
@@ -27,3 +27,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
+[tool.poetry]
+packages = [
+    { include = "rlm_mcp", from = "src" }
+]
